@@ -1,15 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Crypto Landing — Mockup</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    >
 </head>
 
 <body>
-    <h1> Hello World! </h1>
+    <header class="site-header">
+        <div class="logo">My<span>Crypto</span></div>
+        <nav class="nav">
+            <a href="#">Markets</a>
+            <a href="#">News</a>
+            <a href="#">Products</a>
+            <a href="#">Support</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌓</button>
+            <button class="btn primary" id="signupHeader">Sign up</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="left">
+            <div class="hero">
+                <div class="big-counter" aria-hidden="false">
+                    <div class="big-number" id="userCounter">0</div>
+                    <div class="big-sub">USERS<br />TRUST US</div>
+                </div>
+
+                <div class="badges">
+                    <div class="badge">
+                        <div class="laurel">🏆</div>
+                        <div class="badge-text">Best Exchange 2024</div>
+                    </div>
+                    <div class="badge">
+                        <div class="laurel">🥇</div>
+                        <div class="badge-text">Top Security</div>
+                    </div>
+                    <div class="badge">
+                        <div class="laurel">💼</div>
+                        <div class="badge-text">Enterprise Ready</div>
+                    </div>
+                </div>
+
+                <p class="hero-desc">Trade the top cryptocurrencies securely with low fees and advanced tools.</p>
+
+                <div class="cta-row">
+                    <button class="btn ghost" id="signupMain">Sign up</button>
+                    <div class="app-icons">
+                        <a class="store" href="#" aria-label="App Store">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <rect width="24" height="24" rx="4" fill="#fff" opacity="0.08" />
+                            </svg>
+                            <span>App Store</span>
+                        </a>
+                        <a class="store" href="#" aria-label="Google Play">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <rect width="24" height="24" rx="4" fill="#fff" opacity="0.08" />
+                            </svg>
+                            <span>Google Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="mini-footer">
+                <small>© 2025 MyCrypto. All rights reserved.</small>
+            </footer>
+        </section>
+
+        <aside class="right">
+            <div class="card market-card">
+                <div class="card-header">
+                    <h3>Markets</h3>
+                    <div class="market-meta">USD • 24h</div>
+                </div>
+                <ul class="market-list" id="marketList">
+                    <!-- JS populates -->
+                    <li class="loading">Loading prices...</li>
+                </ul>
+            </div>
+
+            <div class="card news-card">
+                <div class="card-header">
+                    <h3>News</h3>
+                    <div class="market-meta">Latest</div>
+                </div>
+                <div class="news-list" id="newsList">
+                    <div class="loading">Loading news...</div>
+                </div>
+            </div>
+
+            <div class="card small-card">
+                <div class="card-header">
+                    <h3>Highlights</h3>
+                </div>
+                <p class="muted">High liquidity, low fees and industry-grade security practices keep your funds safe.
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <script src="app.js" defer></script>
 </body>
 
 </html>
