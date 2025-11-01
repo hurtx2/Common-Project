@@ -87,11 +87,34 @@ body{
 .news-item a{color:#dbefff; text-decoration:none}
 .muted{color:var(--muted)}
 
+ 
+
 /* small screens */
 @media (max-width:900px){
   .container{grid-template-columns:1fr; padding:24px}
   .right{position:relative; top:0}
   .big-number{font-size:44px}
+}
+
+.app-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.store {
+  width: 160px;     /* ✅ одинаковая ширина кнопок */
+  height: 48px;     /* ✅ одинаковая высота */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+.store img {
+  width: 90%;
+  height: auto;
 }
 
 /* accessibility focus */
