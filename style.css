@@ -6,6 +6,14 @@
   --glass: rgba(255, 255, 255, 0.03);
   --card-radius: 16px;
   --gap: 20px;
+
+  --bg: #070712;
+  --panel: #0f1216;
+  --muted: #9aa3b2;
+  --accent: #1fb6ff;
+  --glass: rgba(255, 255, 255, 0.03);
+  --card-radius: 16px;
+  --gap: 20px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
@@ -39,6 +47,84 @@ body {
   backdrop-filter: blur(6px);
   background: linear-gradient(180deg, rgba(7, 7, 18, 0.6), transparent);
 }
+
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.6px
+}
+
+.logo span {
+  color: var(--accent)
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  align-items: center
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center
+}
+
+.icon-btn {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  color: #fff;
+  background: rgba(31, 182, 255, 0.15);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(31, 182, 255, 0.3);
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), #9bfffb);
+  color: #061118;
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 15px rgba(31, 182, 255, 0.4);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+}
+
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
 
 .logo {
   font-weight: 700;
@@ -370,6 +456,40 @@ button:focus {
 
 /* === АНИМАЦИИ КНОПОК === */
 
+/* ==== БЛОК С НАГРАДАМИ ==== */
+.badges {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px; /* можно менять под макет */
+}
+
+/* ==== СТИЛЬ КАЖДОЙ КНОПКИ ==== */
+.badge {
+  background: rgba(39, 166, 255, 0.15); /* полупрозрачный голубой фон */
+  border: 1px solid rgba(39, 166, 255, 0.4);
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: default; /* чтобы было понятно — кнопка НЕ нажимается */
+  transition: transform .25s ease, 
+              bg .25s ease, 
+              box-shadow .25s ease,
+              padding .25s ease,
+              letter-spacing .25s ease; /* анимируем текст */
+}
+
+/* ==== АНИМАЦИЯ ПРИ НАВЕДЕНИИ ==== */
+.badge:hover {
+  padding: 13px 26px;       /* расширяем фон */
+  letter-spacing: 0.5px;    /* немного растягиваем текст */
+  transform: scale(1.06);   /* увеличиваем кнопку целиком */
+  background: rgba(39, 166, 255, 0.28);
+  box-shadow: 0 0 10px rgba(39, 166, 255, 0.7), 
+              0 0 18px rgba(39, 166, 255, 0.5);
+}
+
+
 /* Пульсация */
 @keyframes pulse {
   0% {
@@ -452,5 +572,245 @@ button:focus {
 .site-header .nav a:hover {
   color: #ffffff;
   text-shadow: 0 0 10px rgba(31, 182, 255, 0.9),
-               0 0 18px rgba(31, 182, 255, 0.6);
+    0 0 18px rgba(31, 182, 255, 0.6);
+}
+
+.left {
+  padding-right: 12px
+}
+
+.hero {
+  padding: 40px;
+  background: transparent
+}
+
+.big-counter {
+  display: flex;
+  gap: 24px;
+  align-items: center
+}
+
+.big-number {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #6fe7ff
+}
+
+.big-sub {
+  font-size: 22px;
+  color: var(--muted);
+  line-height: 1
+}
+
+.badges {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px
+}
+
+.badge {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: var(--glass);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.laurel {
+  font-size: 20px
+}
+
+.badge-text {
+  color: var(--muted);
+  font-size: 13px
+}
+
+.hero-desc {
+  color: var(--muted);
+  margin-top: 20px;
+  font-size: 15px;
+  max-width: 520px
+}
+
+.cta-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  align-items: center
+}
+
+.app-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center
+}
+
+.store {
+  width: 160px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.store:hover {
+  background: rgba(31, 182, 255, 0.1);
+  transform: scale(1.06);
+  box-shadow: 0 0 12px rgba(31, 182, 255, 0.3);
+}
+
+.store img {
+  width: 90%;
+  height: auto;
+}
+
+.mini-footer {
+  margin-top: 38px;
+  color: var(--muted)
+}
+
+/* right column */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: sticky;
+  top: 90px;
+  align-self: start;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 16px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 18px rgba(3, 6, 12, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 16px
+}
+
+.market-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.market-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.01);
+  transition: all 0.3s ease;
+}
+
+.market-list li:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.02);
+}
+
+.coin {
+  display: flex;
+  gap: 12px;
+  align-items: center
+}
+
+.coin img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px
+}
+
+.coin-name {
+  font-weight: 600
+}
+
+.coin-symbol {
+  color: var(--muted);
+  font-size: 13px
+}
+
+.price {
+  font-weight: 700
+}
+
+.change-pos {
+  color: #3ddc84
+}
+
+.change-neg {
+  color: #ff6b6b
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+
+.news-item {
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.01);
+  transition: all 0.3s ease;
+}
+
+.news-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.02);
+}
+
+.news-item a {
+  color: #dbefff;
+  text-decoration: none
+}
+
+.muted {
+  color: var(--muted)
+}
+
+/* small screens */
+@media (max-width:900px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 24px
+  }
+
+  .right {
+    position: relative;
+    top: 0
+  }
+
+  .big-number {
+    font-size: 44px
+  }
+}
+
+/* accessibility focus */
+a:focus,
+button:focus {
+  outline: 2px solid rgba(31, 182, 255, 0.25);
+  outline-offset: 2px;
 }
